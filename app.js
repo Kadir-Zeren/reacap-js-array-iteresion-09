@@ -36,3 +36,21 @@ for (let i in grades) {
 console.log(lessThan50);
 console.log(equalOrBiggerThan50);
 console.log(grades);
+
+const students = ["ahmet", "mehmet", "ismet", "saffet", "ahmet", "saffet"];
+
+const findStudent = (name) => {
+  let counter = 0;
+
+  for (let student of students) {
+    student === name.toLowerCase() && counter++;
+  }
+  return counter === 0
+    ? `${name} can not be found`
+    : `${name} found ${counter} times`;
+};
+
+console.log(findStudent("Ahmet"));
+console.log(findStudent("AHMET"));
+console.log(findStudent("ismet"));
+console.log(findStudent("Alihan"));
